@@ -1,0 +1,32 @@
+Source: secureserial
+Section: lib
+Priority: optional
+Maintainer: Philip Fadriquela <pjfadriquela@gmail.com>
+Build-Depends: debhelper-compat (= 12),
+               dh-exec,
+               libserial-dev,
+               python3-dev,
+               swig,
+Standards-Version: 4.4.1
+Homepage: <insert the upstream URL, if relevant>
+
+Package: secureserial
+Architecture: any
+Depends: ${misc:Depends}, ${shlibs:Depends}
+Description: Runtime environment for secureserial.
+
+Package: secureserial-dev
+Section: devel
+Architecture: any
+Depends: secureserial (= ${binary:Version}),
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: Compile-time environment for secureserial.
+
+Package: secureserial-py
+Architecture: any
+Depends: secureserial (= ${binary:Version}),
+         python3-serial-asyncio,
+         ${misc:Depends},
+         ${shlibs:Depends},
+Description: python test handle for secureserial.

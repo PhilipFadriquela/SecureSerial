@@ -1,0 +1,11 @@
+prefix=/usr
+exec_prefix=/usr
+libdir=${exec_prefix}/lib/@DEB_HOST_MULTIARCH@
+includedir=${prefix}/include/secureserial
+
+Name: secureserial
+Description: C++ secureserial lib
+Version: @MAJOR@.@MINOR@.@PATCH@
+
+Libs: -L${libdir} -lsecureserial
+Cflags: -I${includedir}
